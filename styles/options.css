@@ -1,0 +1,80 @@
+.options {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 6rem;
+}
+
+.option {
+    width: 100%;
+    flex: 1;
+    height: 24rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    padding: 1rem 2rem 1.6rem;
+    border: 1px solid rgb(232, 232, 232);
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+}
+
+.info-title {
+    text-align: left;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 3.2rem;
+}
+
+.info-description {
+    color: rgb(79, 79, 79);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 800px) {
+    .options {
+        flex-wrap: wrap;
+    }
+
+    .option {
+        max-width: 45%;
+        flex: auto;
+        height: 20rem;
+    }
+
+    .info-title {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+
+    .info-description {
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+}
